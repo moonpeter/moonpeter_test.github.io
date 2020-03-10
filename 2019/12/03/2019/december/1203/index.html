@@ -1,0 +1,591 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Moonpeter&#39;s Github Blog">
+    <title>2019/december/1203 - Moonpeter&#39;s Github Blog</title>
+    <meta name="author" content="MoonPeter">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"MoonPeter","sameAs":["https://github.com/","moonpeter@kakao.com"]},"articleBody":"12월 3일 TIL용어정리 for 기술 면접제너레이터(Generator)제너레이터에 대해서 이야기해보겠습니다. 제너레이터란 파이썬의 스퀀스를 생성하는 객체로써, 전체 스퀀스를 한번에 메모리에 생성 및 정렬할 필요 없이, 잠재적으로 아주 큰 스퀀스를 순회할 수 있다는 장점이 있습니다. 이는 다시 말해 메모리를 보다 효율적으로 관리할 수 있다는 이야기입니다. 이러한 제너레이터 함수는 일반적인 함수와 비슷하게 생겼지만 yield구문을 사용하여 데이터를 원하는 시점에 반환하고 처리를 다시 시작할 수 있습니다. 일반적인 함수는 진입점이 하나라면 제너레이터는 진입점이 여러개라고 생각할 수 있습니다. 제너레이터는 순회할 때마다 마지막으로 호출된 항목을 기억하고 다음 값을 반환하는 반면 일반 함수는 이전 호출에 대한 메모리가 없고, 항상 똑같은 상태로 첫 번째 라인부터 수행한다는 차이점이 있습니다.\n강의내용정규표현식(Regular Expressions)\n특정한 패턴에 일치하는 복잡한 문자열을 처리할 때 사용하는 기법\n\nmatch : 시작부터 일치하는 패턴 찾기\n\n\n예외처리\n\n\n파일 입출력\n파일 열기\n변수 = open(파일명, 모드)\n\n파일 쓰기\n\n\n","dateCreated":"2019-12-03T09:46:32+09:00","dateModified":"2019-12-03T16:41:19+09:00","datePublished":"2019-12-03T09:46:32+09:00","description":"","headline":"2019/december/1203","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://moonpeter.github.io/2019/12/03/2019/december/1203/"},"publisher":{"@type":"Organization","name":"MoonPeter","sameAs":["https://github.com/","moonpeter@kakao.com"]},"url":"http://moonpeter.github.io/2019/12/03/2019/december/1203/"}</script>
+    <meta name="description" content="12월 3일 TIL용어정리 for 기술 면접제너레이터(Generator)제너레이터에 대해서 이야기해보겠습니다. 제너레이터란 파이썬의 스퀀스를 생성하는 객체로써, 전체 스퀀스를 한번에 메모리에 생성 및 정렬할 필요 없이, 잠재적으로 아주 큰 스퀀스를 순회할 수 있다는 장점이 있습니다. 이는 다시 말해 메모리를 보다 효율적으로 관리할 수 있다는 이야기입니다.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="2019&#x2F;december&#x2F;1203">
+<meta property="og:url" content="http://moonpeter.github.io/2019/12/03/2019/december/1203/index.html">
+<meta property="og:site_name" content="Moonpeter&#39;s Github Blog">
+<meta property="og:description" content="12월 3일 TIL용어정리 for 기술 면접제너레이터(Generator)제너레이터에 대해서 이야기해보겠습니다. 제너레이터란 파이썬의 스퀀스를 생성하는 객체로써, 전체 스퀀스를 한번에 메모리에 생성 및 정렬할 필요 없이, 잠재적으로 아주 큰 스퀀스를 순회할 수 있다는 장점이 있습니다. 이는 다시 말해 메모리를 보다 효율적으로 관리할 수 있다는 이야기입니다.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-03T00:46:32.995Z">
+<meta property="article:modified_time" content="2019-12-03T07:41:19.065Z">
+<meta property="article:author" content="MoonPeter">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            Moonpeter&#39;s Github Blog
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/moonpeter@kakao.com"
+                            
+                            rel="noopener"
+                            title="moonpeter@kakao.com"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">moonpeter@kakao.com</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="5"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            2019/december/1203
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2019-12-03T09:46:32+09:00">
+	
+		    Dec 03, 2019
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <h1 id="12월-3일-TIL"><a href="#12월-3일-TIL" class="headerlink" title="12월 3일 TIL"></a>12월 3일 TIL</h1><h2 id="용어정리-for-기술-면접"><a href="#용어정리-for-기술-면접" class="headerlink" title="용어정리 for 기술 면접"></a>용어정리 for 기술 면접</h2><h4 id="제너레이터-Generator"><a href="#제너레이터-Generator" class="headerlink" title="제너레이터(Generator)"></a>제너레이터(Generator)</h4><p>제너레이터에 대해서 이야기해보겠습니다. 제너레이터란 파이썬의 스퀀스를 생성하는 객체로써, 전체 스퀀스를 한번에 메모리에 생성 및 정렬할 필요 없이, 잠재적으로 아주 큰 스퀀스를 순회할 수 있다는 장점이 있습니다. 이는 다시 말해 메모리를 보다 효율적으로 관리할 수 있다는 이야기입니다. 이러한 제너레이터 함수는 일반적인 함수와 비슷하게 생겼지만 yield구문을 사용하여 데이터를 원하는 시점에 반환하고 처리를 다시 시작할 수 있습니다. 일반적인 함수는 진입점이 하나라면 제너레이터는 진입점이 여러개라고 생각할 수 있습니다. 제너레이터는 순회할 때마다 마지막으로 호출된 항목을 기억하고 다음 값을 반환하는 반면 일반 함수는 이전 호출에 대한 메모리가 없고, 항상 똑같은 상태로 첫 번째 라인부터 수행한다는 차이점이 있습니다.</p>
+<h2 id="강의내용"><a href="#강의내용" class="headerlink" title="강의내용"></a>강의내용</h2><h3 id="정규표현식-Regular-Expressions"><a href="#정규표현식-Regular-Expressions" class="headerlink" title="정규표현식(Regular Expressions)"></a>정규표현식(Regular Expressions)</h3><ul>
+<li><p>특정한 패턴에 일치하는 복잡한 문자열을 처리할 때 사용하는 기법</p>
+</li>
+<li><p>match : 시작부터 일치하는 패턴 찾기</p>
+</li>
+</ul>
+<h3 id="예외처리"><a href="#예외처리" class="headerlink" title="예외처리"></a>예외처리</h3><ul>
+<li></li>
+</ul>
+<h3 id="파일-입출력"><a href="#파일-입출력" class="headerlink" title="파일 입출력"></a>파일 입출력</h3><ul>
+<li><p>파일 열기</p>
+<p>변수 = open(파일명, 모드)</p>
+</li>
+<li><p>파일 쓰기</p>
+</li>
+</ul>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2019/12/04/2019/december/1204/"
+                    data-tooltip="2019/december/1204"
+                    aria-label="PREVIOUS: 2019/december/1204"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2019/12/02/2019/december/1202/"
+                    data-tooltip="2019/december/1202"
+                    aria-label="NEXT: 2019/december/1202"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 MoonPeter. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2019/12/04/2019/december/1204/"
+                    data-tooltip="2019/december/1204"
+                    aria-label="PREVIOUS: 2019/december/1204"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2019/12/02/2019/december/1202/"
+                    data-tooltip="2019/december/1202"
+                    aria-label="NEXT: 2019/december/1202"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://moonpeter.github.io/2019/12/03/2019/december/1203/"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">MoonPeter</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>
