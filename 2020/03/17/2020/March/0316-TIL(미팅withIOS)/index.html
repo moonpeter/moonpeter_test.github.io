@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Moonpeter&#39;s Github Blog">
+    <title>2020/March/0316-TIL(미팅withIOS) - Moonpeter&#39;s Github Blog</title>
+    <meta name="author" content="MoonPeter">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"MoonPeter","sameAs":["https://github.com/","moonpeter@kakao.com"]},"articleBody":"#3/16일(월) 미팅 with IOS\n - 3/16(월) 19:00 ~ 22:00 파이널 팀 프로젝트 OT, 실무 프로젝트 case study, github 코칭 / 3시간\n\n게시판(로그인, 글쓰기, 댓글/대댓글) =&gt; 유사인스타그램?\n어떠한 의견/내용/사진 등을 올리면 댓글 토론하는 것(ex 뽐뿌)\n***렌탈 서비스? : 무엇이든 빌려드립니다. 빌려줄 물건을 가격과 함께 올리고 대출/반납 관리, 흥정기능까지 (유사 AirBnB/Bed &amp; Breakfast)\n가격비교? 최저가 검색?\n소모임/스터디 모집 게시판?\n미세먼지 or 날씨\n지하철 노선도\n\n정보공유 중에서 어떠한 앱을 만들것인가?\n\n크롤링을 하면서 아주 클론이지 않은 것으로\n최소한의 기능위주로 먼저 개발하고 차츰 기능을 추가해 갈 것\n기능정의서 작성(ERD 따라 DB 설계하기 / ERD : 개체-관계 모델링)\n화면 설계서 작성(UX/UI)\n\n뽈레(인스타그램 + 맛집지도)\n다방 클론(완성도 있게)\n스타일쉐어\n아이디어스\n어떤 프로젝트 할지 정해야 하며, 각 클론 사이트 크롤링 되는지 확인해보기 (/robots.txt)\n###소프트웨어 공학\n소프트웨어 개발의 생명주기(waterfall process)\n\n계획, 개발, 시험, 운용하는 전체과정\nRequirement Analysis =&gt; System speccification =&gt; Design =&gt; Implementation =&gt; verification =&gt; \n각 단계가 완료되어야 다음 단계로 넘어갈 수 있음, 모든 구성원이 각 단계에 모두 참여함, 완벽을 중요시하고 인원이 많은 프로젝트에 적합\n\nAgile Development Process(에자일)\n\nCode-oriented Process / 한마디로 정의한다면!!!\n각 단위가 독립적으로 작용함\n일정한 주기를 반복 수행하면서 prototype를 발전 시켜 나감\n각자가 유기적으로 움직여야 잘 운용됨\n스크럼(일 단위 각자 할일을 공유함) ex) 트렐로 / 코드리뷰와 페어프로그래밍\n\n에자일 프로세스의 진행 순서\n\n아래의 설계절차대로 설계를 완료한다.\n한 스프린트 단위는 2주로 한다.(2개의 프로토 타입을 만들예정)\n해당 스프린트 단위에 완료할 기능을 배치하고 그 기능을 구현하기 위한 태스크 단위를 나눈다\n\n​    이때, 마일스톤당 해야할 일을 적절히 배치하여 점진적인 개발이 이뤄지도록 함.\n\nDaily Scrum을 실시(15분 내외로 실시, 어제 한 일과 오늘 할 일에 대한 브리핑)\nWork, Work, Work !!\n\n=&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 다음주까지(3/27일) 구현 직전까지 끝나야 한다\n요구사항 분석\n\n최종 완성품에 구현되어야 할 고객, 기능, 성능, 설계등의 요구사항을 분석, 문서화\n고객이 어떤 것을 원하고, 중요하게 생각하는게 무엇인지, 최대한 자세하게\n미팅의 결과를 문서화!!!\n기능 및 성능적면 + 설계측면까지\n\n\n\n\nid\n구분\n요구사항\n작성자\n반영여부\n비고\n\n\n\nR001\n로그인\nGoogle API를 활용한 소셜 로그인\n문경호\n\nmilestion2\n\n\nR002\n스플래시\n메인화면 표현 전 로고와 배경 제공\nmoonpeter\n0.0.1(버전정보)\nmilestion1\n\n\n####Design Database(BE) =&gt; 요구사항 분석이 디테일 하게 되어 있으면 모델 설계도 미리 할 수 있다.\n\n담기는 정보에 대한 관계가 어디에 연관되어 있는지\nER diagram\n참조 문서 : https://medium.com/@khwsc1/번역-데이터-구조와-설계-튜토리얼-b25792a0aa86\n추천 도구 : Microsoft Visio / diagrams.net\n\nFlow Chart, WireFrame &amp; UI Prototype(FE)\n####API Design(BE)\n\n프론트엔드와 공유할 문서 작성\n추천 도구 : swaggerhub, google sheets\n\n####Design Deploy Model(BE)\n\n클라우드 서비스를 활용할 경우, 위에서 정의되고 설계된 기능들이 어떤 모델에 의해 작동하는지를 도식화(검색어 : aws diagram icon)\n추천도구: Figma, Microsoft Visio, diagrams.net(google docs)\n\n#####How to work together\n\nSource Code Management: git, github\nCommunication: slack, github, github projects(better than trello)\nDaily Scrum -&gt; Work, Work, Work(pair programming) -&gt; Code Review -&gt; Sleep\n\n#####팀별로 슬랙을 새로 만들어서 깃허브 훅을 연결해라\nGithub projects : Backlog / To Do / Doing / Review / Done\n###Git !!!!!!!!!!!!!!!!\n절대 마스터에 푸쉬하면 안된다(팀장만 해야됨) / 디벨롭에서 놀아라\n테스크 하나랑 브랜치 하나(in dev)\n이슈를 먼저 해서 백로그가 잘 관리 되도록 해라\n\nGit flow 에 대해서 알아봐라\n\n$git flow release start\n$git flow release finish \n","dateCreated":"2020-03-17T12:07:40+09:00","dateModified":"2020-03-17T12:07:40+09:00","datePublished":"2020-03-17T12:07:40+09:00","description":"","headline":"2020/March/0316-TIL(미팅withIOS)","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"},"publisher":{"@type":"Organization","name":"MoonPeter","sameAs":["https://github.com/","moonpeter@kakao.com"]},"url":"http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"}</script>
+    <meta name="description" content="#3&#x2F;16일(월) 미팅 with IOS  - 3&#x2F;16(월) 19:00 ~ 22:00 파이널 팀 프로젝트 OT, 실무 프로젝트 case study, github 코칭 &#x2F; 3시간  게시판(로그인, 글쓰기, 댓글&#x2F;대댓글) &#x3D;&gt; 유사인스타그램? 어떠한 의견&#x2F;내용&#x2F;사진 등을 올리면 댓글 토론하는 것(ex 뽐뿌) ***렌탈 서비스? : 무엇이든 빌려드립니다. 빌">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="2020&#x2F;March&#x2F;0316-TIL(미팅withIOS)">
+<meta property="og:url" content="http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/index.html">
+<meta property="og:site_name" content="Moonpeter&#39;s Github Blog">
+<meta property="og:description" content="#3&#x2F;16일(월) 미팅 with IOS  - 3&#x2F;16(월) 19:00 ~ 22:00 파이널 팀 프로젝트 OT, 실무 프로젝트 case study, github 코칭 &#x2F; 3시간  게시판(로그인, 글쓰기, 댓글&#x2F;대댓글) &#x3D;&gt; 유사인스타그램? 어떠한 의견&#x2F;내용&#x2F;사진 등을 올리면 댓글 토론하는 것(ex 뽐뿌) ***렌탈 서비스? : 무엇이든 빌려드립니다. 빌">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-17T03:07:40.060Z">
+<meta property="article:modified_time" content="2020-03-17T03:07:40.060Z">
+<meta property="article:author" content="MoonPeter">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            Moonpeter&#39;s Github Blog
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/moonpeter@kakao.com"
+                            
+                            rel="noopener"
+                            title="moonpeter@kakao.com"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">moonpeter@kakao.com</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="5"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            2020/March/0316-TIL(미팅withIOS)
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-03-17T12:07:40+09:00">
+	
+		    Mar 17, 2020
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>#<strong>3/16일(월)</strong> 미팅 with IOS</p>
+<p> <strong>- 3/16(월) 19:00 ~ 22:00 파이널 팀 프로젝트 OT, 실무 프로젝트 case study, github 코칭 / 3시간</strong></p>
+<ol>
+<li>게시판(로그인, 글쓰기, 댓글/대댓글) =&gt; 유사인스타그램?</li>
+<li>어떠한 의견/내용/사진 등을 올리면 댓글 토론하는 것(ex 뽐뿌)</li>
+<li>***렌탈 서비스? : 무엇이든 빌려드립니다. 빌려줄 물건을 가격과 함께 올리고 대출/반납 관리, 흥정기능까지 (유사 AirBnB/Bed &amp; Breakfast)</li>
+<li>가격비교? 최저가 검색?</li>
+<li>소모임/스터디 모집 게시판?</li>
+<li>미세먼지 or 날씨</li>
+<li>지하철 노선도</li>
+</ol>
+<p>정보공유 중에서 어떠한 앱을 만들것인가?</p>
+<ul>
+<li>크롤링을 하면서 아주 클론이지 않은 것으로</li>
+<li>최소한의 기능위주로 먼저 개발하고 차츰 기능을 추가해 갈 것</li>
+<li>기능정의서 작성(ERD 따라 DB 설계하기 / ERD : 개체-관계 모델링)</li>
+<li>화면 설계서 작성(UX/UI)</li>
+</ul>
+<p>뽈레(인스타그램 + 맛집지도)</p>
+<p><strong>다방 클론(완성도 있게)</strong></p>
+<p>스타일쉐어</p>
+<p>아이디어스</p>
+<p>어떤 프로젝트 할지 정해야 하며, 각 클론 사이트 크롤링 되는지 확인해보기 (/robots.txt)</p>
+<p>###소프트웨어 공학</p>
+<p>소프트웨어 개발의 생명주기(waterfall process)</p>
+<ul>
+<li>계획, 개발, 시험, 운용하는 전체과정</li>
+<li>Requirement Analysis =&gt; System speccification =&gt; Design =&gt; Implementation =&gt; verification =&gt; </li>
+<li>각 단계가 완료되어야 다음 단계로 넘어갈 수 있음, 모든 구성원이 각 단계에 모두 참여함, 완벽을 중요시하고 인원이 많은 프로젝트에 적합</li>
+</ul>
+<p>Agile Development Process(에자일)</p>
+<ul>
+<li>Code-oriented Process / 한마디로 정의한다면!!!</li>
+<li>각 단위가 독립적으로 작용함</li>
+<li>일정한 주기를 반복 수행하면서 prototype를 발전 시켜 나감</li>
+<li>각자가 유기적으로 움직여야 잘 운용됨</li>
+<li>스크럼(일 단위 각자 할일을 공유함) ex) 트렐로 / 코드리뷰와 페어프로그래밍</li>
+</ul>
+<p>에자일 프로세스의 진행 순서</p>
+<ol>
+<li>아래의 설계절차대로 설계를 완료한다.</li>
+<li>한 스프린트 단위는 2주로 한다.(2개의 프로토 타입을 만들예정)</li>
+<li>해당 스프린트 단위에 완료할 기능을 배치하고 그 기능을 구현하기 위한 태스크 단위를 나눈다</li>
+</ol>
+<p>​    이때, 마일스톤당 해야할 일을 적절히 배치하여 점진적인 개발이 이뤄지도록 함.</p>
+<ol>
+<li>Daily Scrum을 실시(15분 내외로 실시, 어제 한 일과 오늘 할 일에 대한 브리핑)</li>
+<li>Work, Work, Work !!</li>
+</ol>
+<p>=&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; 다음주까지(3/27일) 구현 직전까지 끝나야 한다</p>
+<p>요구사항 분석</p>
+<ul>
+<li>최종 완성품에 구현되어야 할 고객, 기능, 성능, 설계등의 요구사항을 분석, 문서화</li>
+<li>고객이 어떤 것을 원하고, 중요하게 생각하는게 무엇인지, 최대한 자세하게</li>
+<li>미팅의 결과를 문서화!!!</li>
+<li>기능 및 성능적면 + 설계측면까지</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>구분</th>
+<th>요구사항</th>
+<th>작성자</th>
+<th>반영여부</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R001</td>
+<td>로그인</td>
+<td>Google API를 활용한 소셜 로그인</td>
+<td>문경호</td>
+<td></td>
+<td>milestion2</td>
+</tr>
+<tr>
+<td>R002</td>
+<td>스플래시</td>
+<td>메인화면 표현 전 로고와 배경 제공</td>
+<td>moonpeter</td>
+<td>0.0.1(버전정보)</td>
+<td>milestion1</td>
+</tr>
+</tbody></table>
+<p>####Design Database(BE) =&gt; 요구사항 분석이 디테일 하게 되어 있으면 모델 설계도 미리 할 수 있다.</p>
+<ul>
+<li>담기는 정보에 대한 관계가 어디에 연관되어 있는지</li>
+<li>ER diagram</li>
+<li>참조 문서 : <a href="https://medium.com/@khwsc1/번역-데이터-구조와-설계-튜토리얼-b25792a0aa86" target="_blank" rel="noopener">https://medium.com/@khwsc1/번역-데이터-구조와-설계-튜토리얼-b25792a0aa86</a></li>
+<li>추천 도구 : Microsoft Visio / diagrams.net</li>
+</ul>
+<p>Flow Chart, WireFrame &amp; UI Prototype(FE)</p>
+<p>####API Design(BE)</p>
+<ul>
+<li>프론트엔드와 공유할 문서 작성</li>
+<li>추천 도구 : swaggerhub, google sheets</li>
+</ul>
+<p>####Design Deploy Model(BE)</p>
+<ul>
+<li>클라우드 서비스를 활용할 경우, 위에서 정의되고 설계된 기능들이 어떤 모델에 의해 작동하는지를 도식화(검색어 : aws diagram icon)</li>
+<li>추천도구: Figma, Microsoft Visio, diagrams.net(google docs)</li>
+</ul>
+<p>#####How to work together</p>
+<ul>
+<li>Source Code Management: git, github</li>
+<li>Communication: slack, github, github projects(better than trello)</li>
+<li>Daily Scrum -&gt; Work, Work, Work(pair programming) -&gt; Code Review -&gt; Sleep</li>
+</ul>
+<p>#####팀별로 슬랙을 새로 만들어서 깃허브 훅을 연결해라</p>
+<p>Github projects : Backlog / To Do / Doing / Review / Done</p>
+<p>###Git !!!!!!!!!!!!!!!!</p>
+<p>절대 마스터에 푸쉬하면 안된다(팀장만 해야됨) / 디벨롭에서 놀아라</p>
+<p>테스크 하나랑 브랜치 하나(in dev)</p>
+<p>이슈를 먼저 해서 백로그가 잘 관리 되도록 해라</p>
+<ul>
+<li>Git flow 에 대해서 알아봐라</li>
+</ul>
+<p>$git flow release start</p>
+<p>$git flow release finish </p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2020/03/10/2020/March/0310-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    data-tooltip="2020/March/0310-TIL(미팅withIOS)"
+                    aria-label="NEXT: 2020/March/0310-TIL(미팅withIOS)"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 MoonPeter. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2020/03/10/2020/March/0310-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    data-tooltip="2020/March/0310-TIL(미팅withIOS)"
+                    aria-label="NEXT: 2020/March/0310-TIL(미팅withIOS)"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://moonpeter.github.io/2020/03/17/2020/March/0316-TIL(%E1%84%86%E1%85%B5%E1%84%90%E1%85%B5%E1%86%BCwithIOS)/"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">MoonPeter</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>
