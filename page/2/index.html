@@ -227,6 +227,86 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2019/12/02/2019/december/1202/"
+                            aria-label=": 2019/december/1202"
+                        >
+                            2019/december/1202
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2019-12-02T15:31:34+09:00">
+	
+		    Dec 02, 2019
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h1 id="12월-2일-TIL"><a href="#12월-2일-TIL" class="headerlink" title="12월 2일 TIL"></a>12월 2일 TIL</h1><h3 id="컴프리헨션-함축"><a href="#컴프리헨션-함축" class="headerlink" title="컴프리헨션(함축)"></a>컴프리헨션(함축)</h3><ul>
+<li>하나 이상의 이터레이터로부터 파이썬의 자료구조를 만드는 콤팩트한 방법</li>
+<li>비교적 간편한 구문으로 반복문과 조건 테스트를 결합할 수 있도록 해줌</li>
+</ul>
+<h4 id="리스트-컴프리헨션"><a href="#리스트-컴프리헨션" class="headerlink" title="리스트 컴프리헨션"></a>리스트 컴프리헨션</h4><ul>
+<li>[표현식 for 항목 in 순회가능한객체]</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">number_list = [number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">6</span>)]</span><br><span class="line">number_list</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>리스트 컴프리헨션은 조건 표현식을 포함할 수 있다.</li>
+<li>[표현식 for 항목 in 순회가능한객체 if조건]</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a_list = [number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">6</span>) <span class="keyword">if</span> number % <span class="number">2</span> ==<span class="number">1</span>]</span><br><span class="line">a_list</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="딕셔너리-컴프리헨션"><a href="#딕셔너리-컴프리헨션" class="headerlink" title="딕셔너리 컴프리헨션"></a>딕셔너리 컴프리헨션</h4><ul>
+<li>{키_ 표현식 : 값_ 표현식 for 표현식 in 순회가능한객체}</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">word = <span class="string">'letters'</span></span><br><span class="line">letter_counts = &#123;letter : word.count(letter) <span class="keyword">for</span> letter <span class="keyword">in</span> word&#125;</span><br><span class="line">letter_counts</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;<span class="string">'l'</span>:<span class="number">1</span>, <span class="string">'e'</span>:<span class="number">2</span>, <span class="string">'t'</span>:<span class="number">2</span>, <span class="string">'r'</span>:<span class="number">1</span>, <span class="string">'s'</span>:<span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="셋-컴프리헨션"><a href="#셋-컴프리헨션" class="headerlink" title="셋 컴프리헨션"></a>셋 컴프리헨션</h4><ul>
+<li>{표현식 for 표현식 in 순회가능한객체}</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a_set = &#123;number <span class="keyword">for</span> number <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">6</span>) <span class="keyword">if</span> number % <span class="number">3</span> ==<span class="number">1</span>&#125;</span><br><span class="line">a_set</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;<span class="number">1</span>, <span class="number">4</span>&#125;</span><br></pre></td></tr></table></figure>
+
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2019/12/02/2019/december/1202/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2019/11/29/2019/november/1129/"
                             aria-label=": 2019/november/1129"
                         >
