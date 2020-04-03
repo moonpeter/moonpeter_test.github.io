@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Moonpeter&#39;s Github Blog">
-    <title>Archives: 2019 - Moonpeter&#39;s Github Blog</title>
+    <title>Category: TIL - Moonpeter&#39;s Github Blog</title>
     <meta name="author" content="MoonPeter">
     
     
@@ -14,7 +14,7 @@
     <script type="application/ld+json">{}</script>
     <meta property="og:type" content="blog">
 <meta property="og:title" content="Moonpeter&#39;s Github Blog">
-<meta property="og:url" content="http://moonpeter.github.io/archives/2019/index.html">
+<meta property="og:url" content="http://moonpeter.github.io/categories/TIL/page/2/index.html">
 <meta property="og:site_name" content="Moonpeter&#39;s Github Blog">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:author" content="MoonPeter">
@@ -218,548 +218,6 @@
                         ">
                 
     <section class="postShorten-group main-content-wrap">
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/27/2019/december/1223_instagram/"
-                            aria-label=": 2019/december/1223_instagram"
-                        >
-                            2019/december/1223_instagram
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-27T14:31:00+09:00">
-	
-		    12월 27, 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="Django로-Instagram-기능-구현하기"><a href="#Django로-Instagram-기능-구현하기" class="headerlink" title="Django로 Instagram 기능 구현하기"></a>Django로 Instagram 기능 구현하기</h1><h2 id="1-경로-및-가상환경-설정하기"><a href="#1-경로-및-가상환경-설정하기" class="headerlink" title="1. 경로 및 가상환경 설정하기"></a>1. 경로 및 가상환경 설정하기</h2><ol>
-<li>~/projects/wps12/instagram/</li>
-<li>env : was-instagram-env (Interpreter 설정해주기)</li>
-<li>$ pip install ‘django&lt;3.0’</li>
-<li>$ git init &amp; git ignore<ul>
-<li>.gitignore      #gitignore.io. (Git, Linux, macOS, Python, Django, Windows, PyCharm+all, jupyternotebook)</li>
-</ul>
-</li>
-<li>$ pip install django-extensions notebook (필수사항 아님, settings의 INSTALLED_APPS에 추가해줘야 작동함)</li>
-<li>pip freeze &gt; requirements.txt (필요한 프로그램들을 list-up하여 파일로 만들어줌)</li>
-</ol>
-<h2 id="2-project-시작하기"><a href="#2-project-시작하기" class="headerlink" title="2. project 시작하기"></a>2. project 시작하기</h2><ol>
-<li><p>$ django-admin startproject config (프로젝트 생성)</p>
-</li>
-<li><p>$ mv config app (config폴더의 이름을 app으로 변경)</p>
-</li>
-<li><p>app폴더를 sources root 설정하기</p>
-<img src="/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224101855003.png" alt="image-20191224101855003" style="zoom: 33%;" />
-
-
-
-</li>
-</ol>
-<h2 id="3-app-추가하기"><a href="#3-app-추가하기" class="headerlink" title="3. app 추가하기"></a>3. app 추가하기</h2><ol>
-<li>members앱 추가<ul>
-<li>$ django-admin startapp members</li>
-</ul>
-</li>
-<li>posts앱 추가<ul>
-<li>$ django-admin startapp posts<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
-</ul>
-</li>
-</ol>
-<h2 id="24일-수업한-내용"><a href="#24일-수업한-내용" class="headerlink" title="24일 수업한 내용"></a>24일 수업한 내용</h2><p>HTTP Scheme + HOST + MEDIA_URL + FileField의 실제 값</p>
-<p>http//: + localhost:8000 + /meida/ + popsts/images/파일명.jpg</p>
-<p>![image-20191224143043684](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224143043684.png)</p>
-<p>![image-20191224143124546](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224143124546.png)</p>
-<p>=&gt; prefix=settings.MEDIA_URL, 로 변경</p>
-<p>쿠키기반 사용자 세션</p>
-<h1 id="image-20191224185700341-Users-moonpeter-Library-Application-Support-typora-user-images-image-20191224185700341-png"><a href="#image-20191224185700341-Users-moonpeter-Library-Application-Support-typora-user-images-image-20191224185700341-png" class="headerlink" title="![image-20191224185700341](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224185700341.png)"></a>![image-20191224185700341](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224185700341.png)</h1><p>   oo</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>62aa7d37cefebe001f8f69f1f4433ee1398bb42b</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/27/2019/december/1223_instagram/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/11/2019/december/1211_django/"
-                            aria-label=": 2019/december/1211_django"
-                        >
-                            2019/december/1211_django
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-11T13:03:00+09:00">
-	
-		    12월 11, 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="12월-11일-TIL"><a href="#12월-11일-TIL" class="headerlink" title="12월 11일 TIL"></a>12월 11일 TIL</h1><h2 id="장고걸스-튜토리얼-2일차"><a href="#장고걸스-튜토리얼-2일차" class="headerlink" title="장고걸스 튜토리얼 2일차"></a>장고걸스 튜토리얼 2일차</h2><p>모델-뷰-컨트롤러 :  소프트웨어 공학에서 사용되는 소프트웨어 디자인 패턴이다. 이 패턴을 성공적으로 사용하면, 사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션의 시각적 요소나 그 이면에서 실행되는 비즈니스 로직을 서로 영향 없이 쉽게 고칠 수 있는 애플리케이션을 만들 수 있다. MVC에서 모델은 애플리케이션의 정보(데이터)를 나타내며, 뷰는 텍스트, 체크박스 항목 등과 같은 사용자 인터페이스 요소를 나타내고, 컨트롤러는 데이터와 비즈니스 로직 사이의 상호동작을 관리한다.</p>
-<p>MVC(모델-뷰-컨트롤러)</p>
-<p>MTV</p>
-<p><strong>Model</strong></p>
-<p>​    DB</p>
-<p><strong>View (Django: Template)</strong></p>
-<p>​    사용자가 보는 화면</p>
-<p><strong>Controller (Django : View)</strong></p>
-<p>​    DB의 데이터를 사용자가 보는 화면으로 전달(View code를 사용하여 response(HTML형태)를 생성하여 전달) or</p>
-<p>​    사용자의 데이터를 적절히 가공해서 DB에 변경사항을 전달</p>
-<p>urls.py -&gt; URLResolver</p>
-<p>요청의 URL을 판단해서 특정 Controller(View 함수)로 연결</p>
-<p>Request -&gt; runserver -&gt; urls.py -&gt; view function -&gt;Response(HTTP 규격)</p>
-<p>pip install django-extentions notebook</p>
-<p>./manage.py shell_plus –notebook</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/11/2019/december/1211_django/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/10/2019/december/1210_django/"
-                            aria-label=": 2019/december/1210_django"
-                        >
-                            2019/december/1210_django
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-10T15:57:00+09:00">
-	
-		    12월 10, 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="12월-10일-TIL"><a href="#12월-10일-TIL" class="headerlink" title="12월 10일 TIL"></a>12월 10일 TIL</h1><h2 id="장고걸스-튜토리얼-1일차"><a href="#장고걸스-튜토리얼-1일차" class="headerlink" title="장고걸스 튜토리얼 1일차"></a>장고걸스 튜토리얼 1일차</h2><h4 id="환경설정"><a href="#환경설정" class="headerlink" title="환경설정"></a>환경설정</h4><ul>
-<li><p>~projects/wps12/djangogirls/</p>
-</li>
-<li><p>env : wps-djangogirls-env</p>
-</li>
-<li><ul>
-<li><p>pyenv virtualenv 3.7.4 &lt;환경명&gt;</p>
-</li>
-<li><p>pyenv local &lt;환경명&gt;</p>
-</li>
-</ul>
-</li>
-<li><ul>
-<li>gitinit</li>
-<li>.gitignore      #gitignore.io. (Git, Linux, macOS, Python, Django, Windows, PyCharm+all)- pip install ‘django&lt;3.0’</li>
-</ul>
-</li>
-</ul>
-<h4 id="장고란-무엇인가요"><a href="#장고란-무엇인가요" class="headerlink" title="장고란 무엇인가요?"></a>장고란 무엇인가요?</h4><p>무료 오픈소스 웹 애플리케이션 프레임 워크 =&gt; 웹 애플리케이션을 만들때 반복적인 작업을 피하기 위해서</p>
-<p>urlresolver : url해석기</p>
-<h4 id="첫번째-프로젝트"><a href="#첫번째-프로젝트" class="headerlink" title="첫번째 프로젝트"></a>첫번째 프로젝트</h4><p>django-admin startproject config .</p>
-<p>python manage.py migrate</p>
-<p>./manage.py runserver.   =&gt; local:8000번에 접속해서 확인(개발서버를 작동시킴)</p>
-<h4 id="장고-모델"><a href="#장고-모델" class="headerlink" title="장고 모델"></a>장고 모델</h4><ul>
-<li><p>객체 =&gt; 모델을 만들어 그 모델이 어떤 역할을 가지고 어떻게 행동해야 하는지 정의하여 서로 알아서 상호작용할 수 있도록 만드는 것</p>
-</li>
-<li><p>장고모델 : 장고안의 모델은 객체의 특별한 종류, 이 모델을 저장하면 내용이 데이터베이스에 저장되는 것이 특별한 점</p>
-</li>
-<li><p>어플리케이션 만들기 : 의미단위로 구분하는 패키지는 만듬, 데이터베이스에 기록이 되면 애플리케이션이다.</p>
-<ul>
-<li>python manage.py startapp blog. =&gt; 블로그 애플리케이션 생성</li>
-<li>애플리케이션 생성 후 장고에 사용해야 한다고 알려줘야함 =&gt; config/settings.py 를 열어 INSTALLED_APPS 에 ‘blog’ 를 추가</li>
-</ul>
-</li>
-</ul>
-<p>블로그 글 모델 만들기</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/10/2019/december/1210_django/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/09/2019/december/1209_DB/"
-                            aria-label=": 2019/december/1209_DB"
-                        >
-                            2019/december/1209_DB
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-09T12:53:00+09:00">
-	
-		    12월 09, 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="12월-9일-TIL"><a href="#12월-9일-TIL" class="headerlink" title="12월 9일 TIL"></a>12월 9일 TIL</h1><p>데이터 베이스</p>
-<p>AWS 가입 필요함</p>
-<p>리전 : 서버의 위치(아시아 태평양 - 서울로 선택)</p>
-<ol>
-<li>데이터 베이스의 개요</li>
-</ol>
-<p>DB : 데이터를 통합하여 관리하는 데이터의 집합</p>
-<p>DBMS : 데이터 베이스를 관리하느 ㄴ미들웨어 시스템 데이터베이스 관리 시스템</p>
-<p>RDBMS vs NoSQL 두가지 방식의 데이터베이스가 있음</p>
-<p> =&gt; 데이터 테이블간에 관계가 있고 없고가 차이남. </p>
-<p>MySQL의 특징</p>
-<ul>
-<li>오픈소스</li>
-<li>다중사용자와 다중 스레드 지원</li>
-<li>다양한 운영체제와 프로그래밍 언어 지원</li>
-<li>표준 SQL을 사용</li>
-<li>작과 강력하며 가격이 저렴</li>
-</ul>
-<p>![image-20191209133140017](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191209133140017.png)</p>
-<p>MySQL 설치 및 설정</p>
-<ul>
-<li><p>EC2 를 검색</p>
-</li>
-<li><p>인스턴스 : 서버컴퓨터를 만듬</p>
-</li>
-<li><p>인스턴스 유형 선택 : ubuntu 18.04 선택</p>
-</li>
-<li><p>t2.micro 사용</p>
-</li>
-<li><p>보안그룹 구성</p>
-<ul>
-<li>​    규칙 2개 추가 포트범위 : 3306, 8888</li>
-</ul>
-</li>
-<li><p>키페어 다운로드</p>
-</li>
-</ul>
-<p>트랜젝션 - 중요한 개념임</p>
-<p>절차를 하나로 묶는다. 프로세스의 묶음</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/09/2019/december/1209_DB/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/05/2019/december/1205_tree/"
-                            aria-label=": 2019/december/1205_tree"
-                        >
-                            2019/december/1205_tree
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-05T20:49:00+09:00">
-	
-		    12월 05, 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="자료구조-트리"><a href="#자료구조-트리" class="headerlink" title="자료구조 - 트리"></a>자료구조 - 트리</h1><ul>
-<li><p>비선형자료구조 (&lt;-&gt;선형 자료구조 : 큐, 스택 등)</p>
-</li>
-<li><p>자료가 계층적으로 구성되어있음</p>
-</li>
-<li><p>선형 자료구조는 자료를 저장하고 꺼내는 것에 초점이 맞춰져 있고, 비선형 구조는 표현에 초점이 맞춰져 있음</p>
-</li>
-<li><p>트리구조의 예 : 컴퓨터의 directory 구조<br><img src="https://t1.daumcdn.net/cfile/tistory/211374355892B59626" alt="computer directory structure"></p>
-</li>
-<li><p>관련용어</p>
-<ul>
-<li><strong>Root Node</strong> : 트리 구조에서 최상위에 존재하는 A와 같은 노드</li>
-<li><strong>Node</strong> : 트리의 구성요소에 해당하는 A,B,C,D,E,F,G,H,I,J와 같은 요소</li>
-<li><strong>Edge</strong> : 노드와 노드를 연결하는 연결설</li>
-<li><strong>Terminal Node(Leaf Node)</strong> : 밑으로 또 다른 노드가 연결되어 있지 않은 H,I,J,F,G와 같은 노드</li>
-<li><strong>Sub-Tree</strong> : 큰 트리(전체)에 속하는 작은 트리</li>
-<li><strong>Level</strong> : 트리에서 각 층별로 숫자를 매김</li>
-<li><strong>Height</strong> : 트리의 최고 레벨 (3)</li>
-</ul>
-</li>
-<li><p>트리의 종류</p>
-<ul>
-<li><p><strong>트리 vs 이진 트리</strong></p>
-<p>이진 트리 : 자식노드가 최대 2개</p>
-</li>
-<li><p><strong>이진트리 vs 이진 탐색 트리</strong></p>
-<p>이진 탐색 트리 : 모든 왼쪽 자식들 &lt;= n &lt; 모든 오른쪽 자식들 (모든 노드 n에 대해서 반드시 참)</p>
-</li>
-<li><p><strong>완전 이진 트리 VS 전 이진 트리 VS 포화 이진 트리</strong></p>
-<p><img src="https://gmlwjd9405.github.io/images/data-structure-tree/tree-types-example.png" alt="img"></p>
-</li>
-<li><p>완전 이진 트리(Complite Binary Tree)</p>
-</li>
-<li><p><img src="https://gmlwjd9405.github.io/images/data-structure-tree/Complete-Binary-Tree.png" alt="img"></p>
-</li>
-<li><p>전 이진 트리(Full Binary Tree 또는 Strictly Binary Tree)</p>
-</li>
-<li><p><img src="https://gmlwjd9405.github.io/images/data-structure-tree/Full-Binary-Tree.png" alt="img"></p>
-</li>
-<li><p>포화 이진 트리(Perfect Binary Tree)</p>
-</li>
-<li><p><img src="https://gmlwjd9405.github.io/images/data-structure-tree/Perfect-Binary-Tree.png" alt="img"></p>
-</li>
-</ul>
-</li>
-</ul>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/05/2019/december/1205_tree/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/04/2019/december/1204/"
-                            aria-label=": 2019/december/1204"
-                        >
-                            2019/december/1204
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-04T21:27:00+09:00">
-	
-		    12월 04, 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="12월-4일"><a href="#12월-4일" class="headerlink" title="12월 4일"></a>12월 4일</h1><h2 id="가상환경-셋팅"><a href="#가상환경-셋팅" class="headerlink" title="가상환경 셋팅"></a>가상환경 셋팅</h2><h4 id="projects-wps12th-python-가상환경이름-wps-python-env"><a href="#projects-wps12th-python-가상환경이름-wps-python-env" class="headerlink" title="~/projects/wps12th/python/     (가상환경이름: wps-python-env)"></a>~/projects/wps12th/python/     (가상환경이름: wps-python-env)</h4><h4 id="가상환경-생성-생선은-어디서-해도-상관없음"><a href="#가상환경-생성-생선은-어디서-해도-상관없음" class="headerlink" title="가상환경 생성(생선은 어디서 해도 상관없음)"></a>가상환경 생성(생선은 어디서 해도 상관없음)</h4><p>pyenv virtualenv 3.7.5 wps-python-env</p>
-<h4 id="가상환경을-적용-적용하는-위치는-중요"><a href="#가상환경을-적용-적용하는-위치는-중요" class="headerlink" title="가상환경을 적용(적용하는 위치는 중요)"></a>가상환경을 적용(적용하는 위치는 중요)</h4><p>cd ~/projects/wps12th/python/</p>
-<p>pyenv local was-python-env</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/04/2019/december/1204/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Comment and share
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
     
     
     <article class="postShorten postShorten--thumbnailimg-bottom">
@@ -1201,22 +659,83 @@
         
     </article>
     
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/2019/11/28/2019/november/1127/"
+                            aria-label=": 2019/november/1127"
+                        >
+                            2019/november/1127
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2019-11-28T20:59:00+09:00">
+	
+		    11월 28, 2019
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/TIL/">TIL</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <hr>
+<h2 id="Q46-Str-자료형의-응용"><a href="#Q46-Str-자료형의-응용" class="headerlink" title="Q46. Str 자료형의 응용"></a>Q46. Str 자료형의 응용</h2><h3 id="1부터-100까지의-100을-포함-모든-숫자를-일렬로-놓고-모든-자릿수의-총-합을-구하세요"><a href="#1부터-100까지의-100을-포함-모든-숫자를-일렬로-놓고-모든-자릿수의-총-합을-구하세요" class="headerlink" title="1부터 100까지의(100을 포함) 모든 숫자를 일렬로 놓고 모든 자릿수의 총 합을 구하세요."></a>1부터 100까지의(100을 포함) 모든 숫자를 일렬로 놓고 모든 자릿수의 총 합을 구하세요.</h3><p>ex) 예를 들어 10부터 15까지의 모든 숫자를 일렬로 놓으면 101112131415이고 각 자리의 숫자를 더하면 25입니다.</p>
+<h5 id="1-1-100까지-숫자-나열하기"><a href="#1-1-100까지-숫자-나열하기" class="headerlink" title="1) 1~100까지 숫자 나열하기"></a>1) 1~100까지 숫자 나열하기</h5><h5 id="2-나열된-숫자-문자열로-변환하여-자리수에-해당하는-숫자를-1자씩-나열"><a href="#2-나열된-숫자-문자열로-변환하여-자리수에-해당하는-숫자를-1자씩-나열" class="headerlink" title="2) 나열된 숫자 문자열로 변환하여 자리수에 해당하는 숫자를 1자씩 나열"></a>2) 나열된 숫자 문자열로 변환하여 자리수에 해당하는 숫자를 1자씩 나열</h5><h5 id="3-문자열로-변환되어-1자리-숫자로-된-숫자들은-다시-정수로-만들어서-합산함"><a href="#3-문자열로-변환되어-1자리-숫자로-된-숫자들은-다시-정수로-만들어서-합산함" class="headerlink" title="3) 문자열로 변환되어 1자리 숫자로 된 숫자들은 다시 정수로 만들어서 합산함"></a>3) 문자열로 변환되어 1자리 숫자로 된 숫자들은 다시 정수로 만들어서 합산함</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">''</span>                  <span class="comment">### 1~100까지 숫자를 문자열로 담기 위해서</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>):    <span class="comment">### 1~101까지 순환</span></span><br><span class="line">    s += str(i)         <span class="comment">### 1~100까지 문자열로 변환하여 s에 할당</span></span><br><span class="line">print(s)    <span class="comment">#없어도 됨. </span></span><br><span class="line">result = <span class="number">0</span>              <span class="comment">### 각 자리 수를 합한 값을 담기 위해서</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> s:             <span class="comment">### i에 s에 할당된 문자열 숫자를 차례로 할당</span></span><br><span class="line">    result += int(i)    <span class="comment">### result에 숫자로 변환된 i를 차례로 합산</span></span><br><span class="line">print(result)           <span class="comment">### 값을 보여줌</span></span><br></pre></td></tr></table></figure>
+
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2019/11/28/2019/november/1127/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
     <div class="pagination-bar">
     <ul class="pagination">
         
-        
-          <li class="pagination-next">
+          <li class="pagination-prev">
             <a
                 class="btn btn--default btn--small"
-                href="/archives/2019/page/2/"
-                aria-label="OLDER POSTS"
+                href="/categories/TIL/"
+                aria-label="NEWER POSTS"
             >
-              <span>OLDER POSTS</span>
-              <i class="fa fa-angle-right text-base icon-ml"></i>
+              <i class="fa fa-angle-left text-base icon-mr"></i>
+              <span>NEWER POSTS</span>
             </a>
           </li>
         
-        <li class="pagination-number">page 1 of 2</li>
+        
+        <li class="pagination-number">page 2 of 2</li>
     </ul>
 </div>
 
