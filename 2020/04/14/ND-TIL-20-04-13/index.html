@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Moonpeter&#39;s Github Blog">
+    <title>ND TIL(20.04.13) - Moonpeter&#39;s Github Blog</title>
+    <meta name="author" content="MoonPeter">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"MoonPeter","sameAs":["https://github.com/","moonpeter@kakao.com"]},"articleBody":"4/13일(월)\n안드로이드 핸드폰 준비해야함(공기계라도 with 데이터 케이블)\n\n자바 설치\n\njava.oracle.com 에서 설치(Java SE Development Kit 14 Downloads)\n자바 개발 키트(Java Development Kit, JDK)는 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소다. 이 중심에는 자바 컴파일러(Compiler)가 있다.\n환경설정(교재 686p 참조)\n내 PC 에서 속성 열기 =&gt; 고급 시스템 설정 =&gt; 환경변수 =&gt; 새로만들기 =&gt; Path 편집 =&gt; 새로만들기(JAVA_HOME과 동일하게 경로 잡아줌 + bin)\n변수 이름 : JAVA_HOME\n변수 값 : C:\\Program Files\\Java\\jdk-14\n\n\ncmd에서 java라고 입력하여 제대로 되었는지 확인하기\n\n\n\n\n크롬 &amp; 톰캣 설치\n\n크롬 : 브라우저\n톰캣 : 웹어플리케이션 서버\n자바가 먼저 설치되어 있어야 함\n설치경로 : C:\\Tomcat\nbin폴더 : 가장 많이 사용하는 폴더\n실제소스들은 webapps에 들어 있음\ncmd에서 startup.bat로 실행(경로 확인하기)\nlocalhost:8080으로 확인하기\n191p 예제 5-5번 실습해보기(localhost 포트 설정 확인하기!)\n\n\n\n\n\n01. 모바일 웹 환경1. 웹의 진화\nhttp://www.naver.com:8080/a.html\n언어 + 주소:포트/세부내용\nhttp:// =&gt; 프로토콜, https는 보안이 플러스되어 있음, 프로토콜은 언어이다. \nwww.naver.com =&gt; 도메인\n:8080/ =&gt; 포트번호, 웹은 기본이 80번을 사용\na.html =&gt; URI(주소의 식별자)\n\n\n웹 브라우저\n웹 패러다임의 진화\n웹 1.0\n포털 중심의 웹의 시대\n일방적으로 정보를 제고\n\n\n웹 2.0\n플랫폼 중심의 웹 시대\n정보의 생성, 공유, 참여가 가능\nex) 유튜브, 트위터\n\n\n웹 3.0\n\n\n웹 마크업 언어의 발전\nSGML : 너무 복잡해서 잘 사용하지 않음\nHTML : 쉽고 편리한 웹 페이지 작성용 마크업 언어, 표현에 중심, 화면에 어떻게 보이면 된다에 중점\nXML : 문서 형식과 의미를 표현한 마크업 언어, 문서나 정보의 교환을 위한 웹 문서 표준\nXHTML : HTML + XML =&gt; 현재 진행이 중단된 웹 문서 표준\nHTML5 : 차세대 웹 기술, 현재 진행 중인 차세대 웹 문서 표준\n\n\n웹 표준\n익스플로러가 웹 표준을 무시해도 작동하게 되어서 \nW3C가 정한 표준 기술만을 사용하여 웹 문서의 구조와 표현, 기능을 제공하는 것\n사용자 뿐만 아니라 개발자에게도 많은 이점을 제공\n\n\n웹 표준을 따라야 하는 이유(검색해봐)\n\n2. HTML5\nHTML5 등장의 의미(교재 한번 읽어봐)\nHTML5의 주요 발전 과정\nHTML5 사양\n주요 HTML5 API : 캔버스, 멀티미디어, 위치정보, 오프라인 웹, 웹 데이터베이스, 로컬저장소, 웹 소켓, 웹 워커\n\n\nHTML5의 발전 방향\nHTML5의 특징\n웹 표준으로서의 위상 강화\n웹 문서의 의미 주고화 지원\n웹 언어에서 웹 플랫폼으로의 기능확장\n웹 폼 기능 지원\n풍부한 웹 페이지(미디어) 기능지원\n모바일 웹 어플리케이션 개발 지원\n\n\n\n\n\n3. 플랫폼이 된 웹 브라우저\n단순한 뷰어가 아니라 프로그램을 실행할 수 있는 플래폼으로 간주됨\n“HTML페이지”라는 프로그램이 “웹 브라우저라”는 운영체제에서 실행되는 것으로 이해\n웹의 목표\n웹 브라우저 전쟁\n주요 웹 브라우저의 종류\n웹 브라우저\n단순한 번역기 이상의 역할을 수행\nHTML, CSS, 자바스크립트 코드를 받아 해석하고 처리하는 기능을 수행\n내부에 웹 브라우저 엔진을 가짐\n\n\n웹 브라우저 엔진 기본 요소\nDOM 트리 구성 : DOM 파서\nHTML문서를 파서를 통해 파싱해서 메모리에 ‘DOM(Document Object Model) 트리’라는 내부 트리를 구성\n\n\nMVC(Model View Controller) 구조를 그대로 따름\n모델 - HTML / 뷰 - CSS / 기능제어기 - JavaScript\n\n\nMVC 개발 방식\n\n4. 모바일 웹 환경\n데스크톱 웹과 모바일 웹\n앱\n모바일 프로그래밍 방식의 변화\n네이티브 웹\n네이티브 언어를 사용하여 개발된 모바일 장치에 최적화된 애플리케이션\n장점\n카메라, 스피커, GPS등의 장치들을 직접 제어할 수 있고 효율성이 높음\n각 플랫폼 별로 다른 프로그래밍 언어를 익혀서 개발해야 함\n각 플랫폼에 최적화되어 실행 속도가 빠르다.\n스마트폰만의 모든 장치 접근이 가능하며 정교한 UI 개발이 가능하다\n앱 마켓을 통해 등록함으로써 수익을 얻기가 쉽다.\n\n\n단점\n개발기간이 길고 많은 비용이 소요된다.\n각 플랫폼 별로 별도의 버전을 다른 언어로 매번 개발해야 한다.\n앱 마켓을 통해 배포되므로 갱신이나 유지보수가 복잡하고 어렵다.\n\n\n\n\n웹앱\n웹 기술로 개발하지만 겉모양은 네이티브처럼 보이는 애플리케이션\n모바일 브라우저\n장점\n기기에 상관없이 한번 개발하면 어떤 환경에도 적용할 수 있음\n기존의 표준 웹 기술을 사용하므로 단기간에 빠르고 쉽게 개발할 수 있다.\n웹 브라우저만 있으면 다양한 장치와 플랫폼에서 동일하게 실행 가능하다.\n웹 브라우저를 통해 배포되므로 갱신이나 유지보수가 쉽다.\n\n\n단점\n웹 페이지 내용이 많을 경우, 성능 문제가 발생할 수 있다.\n모바일 장치에 대한 제어가 제한적이며 코드 효율성이 낮다.\n적용할 수 있는 UI에 한계가 있다.\n\n\n\n\n하이브리드 앱\n네이티브앱과 웹앱의 장점을 결합한 애플리케이션\n대부분의 기능은 웹 기술로 개발하고 최소한의 기능만 네이티브로 구현\n특징\n표준 웹 기술로 웹앱을 개발하고 이를 다시 네이티브앱으로 변환한 다음 배포하는 방식\n크로스 르레임워크를 사용하여 웹 페이지를 애플리케이션으로 변환하거나 애플리케이션처럼 독립적으로 실행할 수 있음\n\n\n장점\n다양한 플랫폼을 위한 앱 개발 및 유지보수 비용이 낮다.\n장치 접근도 가능하고 앱 마켓을 통해 등록, 배포할 수 있다.\n\n\n단점\n네이티브앱에 비해 실행 속도가 느리다.\n자유로운 UI구현에 한계가 있다.\n\n\n\n\n상호 보완 관계 속에 각 방식마다 특성을 갖고 함께 발전할 전망\n네이티브앱\n각 모바일 장치와 플랫폼의 특성을 최대한 이용하는 방향\n‘기능’중심의 영역의 강점\n\n\n웹앱, 하이브리드 앱\n‘기능’중심의 생산성과 비용측면을 강화하는 방향\n동적인 콘텐츠가 핵심인’정보’ 중심의 영역에 강점\n\n\n\n\n\n02. HTML5 기초다지기1. HTML5 개요\nHTML5 문서의 구조\n\nDOCTYPE\nhtml\nhead\nbody\n\n\nHTML5의 5가지 기본 요소\n\n태그 : 쌍으로 구성되어 있음, \n내용 : 태그로 둘러싸인 물자열\n엘리먼트 : 태그와 내용을 합친 전체 문자열\n속성 : 시작 태그 안에 사용\n속성값\n\n\n엘리먼트\n\nHTML5문서는 기본적으로 엘리먼트들의 모임\n하나의 웹 문서는 다양한 유형의 엘리먼트 조각으로 분리될 수 있음\n\n\n태그\n\n웹 브라우저가 해석해야 할 대상\n엘리먼트의 시작과 끝을 지정하는 엘리먼트 구성 요소중에 하나\n엘리먼트 내용에 대한 의미나 역할을 표현하는 일종의 ‘명령어’\n\n\n\n","dateCreated":"2020-04-14T12:39:37+09:00","dateModified":"2020-04-14T12:39:53+09:00","datePublished":"2020-04-14T12:39:37+09:00","description":"","headline":"ND TIL(20.04.13)","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"},"publisher":{"@type":"Organization","name":"MoonPeter","sameAs":["https://github.com/","moonpeter@kakao.com"]},"url":"http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"}</script>
+    <meta name="description" content="4&#x2F;13일(월) 안드로이드 핸드폰 준비해야함(공기계라도 with 데이터 케이블)  자바 설치  java.oracle.com 에서 설치(Java SE Development Kit 14 Downloads) 자바 개발 키트(Java Development Kit, JDK)는 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소다. 이 중심에는 자바 컴파일러(Co">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="ND TIL(20.04.13)">
+<meta property="og:url" content="http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/index.html">
+<meta property="og:site_name" content="Moonpeter&#39;s Github Blog">
+<meta property="og:description" content="4&#x2F;13일(월) 안드로이드 핸드폰 준비해야함(공기계라도 with 데이터 케이블)  자바 설치  java.oracle.com 에서 설치(Java SE Development Kit 14 Downloads) 자바 개발 키트(Java Development Kit, JDK)는 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소다. 이 중심에는 자바 컴파일러(Co">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2020-04-14T03:39:37.000Z">
+<meta property="article:modified_time" content="2020-04-14T03:39:53.881Z">
+<meta property="article:author" content="MoonPeter">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="5">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/%20"
+            aria-label=""
+        >
+            Moonpeter&#39;s Github Blog
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="5">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Kategorien"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategorien</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archiv"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archiv</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Suche"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Suche</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="Über"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Über</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/moonpeter@kakao.com"
+                            
+                            rel="noopener"
+                            title="moonpeter@kakao.com"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">moonpeter@kakao.com</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="5"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            ND TIL(20.04.13)
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2020-04-14T12:39:37+09:00">
+	
+		    14 4월 2020
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <h2 id="4-13일-월"><a href="#4-13일-월" class="headerlink" title="4/13일(월)"></a>4/13일(월)</h2><ul>
+<li><p>안드로이드 핸드폰 준비해야함(공기계라도 with 데이터 케이블)</p>
+</li>
+<li><p>자바 설치</p>
+<ul>
+<li>java.oracle.com 에서 설치(Java SE Development Kit 14 Downloads)</li>
+<li>자바 개발 키트(Java Development Kit, JDK)는 자바 애플리케이션을 구축하기 위한 핵심 플랫폼 구성요소다. 이 중심에는 자바 컴파일러(Compiler)가 있다.</li>
+<li>환경설정(교재 686p 참조)<ul>
+<li>내 PC 에서 속성 열기 =&gt; 고급 시스템 설정 =&gt; 환경변수 =&gt; 새로만들기 =&gt; Path 편집 =&gt; 새로만들기(JAVA_HOME과 동일하게 경로 잡아줌 + bin)<ul>
+<li>변수 이름 : JAVA_HOME</li>
+<li>변수 값 : C:\Program Files\Java\jdk-14</li>
+</ul>
+</li>
+<li>cmd에서 java라고 입력하여 제대로 되었는지 확인하기</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>크롬 &amp; 톰캣 설치</p>
+<ul>
+<li>크롬 : 브라우저</li>
+<li>톰캣 : 웹어플리케이션 서버<ul>
+<li>자바가 먼저 설치되어 있어야 함</li>
+<li>설치경로 : C:\Tomcat</li>
+<li>bin폴더 : 가장 많이 사용하는 폴더</li>
+<li>실제소스들은 webapps에 들어 있음</li>
+<li>cmd에서 startup.bat로 실행(경로 확인하기)</li>
+<li>localhost:8080으로 확인하기</li>
+<li>191p 예제 5-5번 실습해보기(localhost 포트 설정 확인하기!)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="01-모바일-웹-환경"><a href="#01-모바일-웹-환경" class="headerlink" title="01. 모바일 웹 환경"></a>01. 모바일 웹 환경</h3><h4 id="1-웹의-진화"><a href="#1-웹의-진화" class="headerlink" title="1. 웹의 진화"></a>1. 웹의 진화</h4><ul>
+<li><a href="http://www.naver.com:8080/a.html" target="_blank" rel="noopener">http://www.naver.com:8080/a.html</a><ul>
+<li>언어 + 주소:포트/세부내용</li>
+<li>http:// =&gt; 프로토콜, https는 보안이 플러스되어 있음, 프로토콜은 언어이다. </li>
+<li><a href="http://www.naver.com" target="_blank" rel="noopener">www.naver.com</a> =&gt; 도메인</li>
+<li>:8080/ =&gt; 포트번호, 웹은 기본이 80번을 사용</li>
+<li>a.html =&gt; URI(주소의 식별자)</li>
+</ul>
+</li>
+<li>웹 브라우저</li>
+<li>웹 패러다임의 진화<ul>
+<li>웹 1.0<ul>
+<li>포털 중심의 웹의 시대</li>
+<li>일방적으로 정보를 제고</li>
+</ul>
+</li>
+<li>웹 2.0<ul>
+<li>플랫폼 중심의 웹 시대</li>
+<li>정보의 생성, 공유, 참여가 가능</li>
+<li>ex) 유튜브, 트위터</li>
+</ul>
+</li>
+<li>웹 3.0</li>
+</ul>
+</li>
+<li>웹 마크업 언어의 발전<ul>
+<li>SGML : 너무 복잡해서 잘 사용하지 않음</li>
+<li>HTML : 쉽고 편리한 웹 페이지 작성용 마크업 언어, 표현에 중심, 화면에 어떻게 보이면 된다에 중점</li>
+<li>XML : 문서 형식과 의미를 표현한 마크업 언어, 문서나 정보의 교환을 위한 웹 문서 표준</li>
+<li>XHTML : HTML + XML =&gt; 현재 진행이 중단된 웹 문서 표준</li>
+<li>HTML5 : 차세대 웹 기술, 현재 진행 중인 차세대 웹 문서 표준</li>
+</ul>
+</li>
+<li>웹 표준<ul>
+<li>익스플로러가 웹 표준을 무시해도 작동하게 되어서 </li>
+<li>W3C가 정한 표준 기술만을 사용하여 웹 문서의 구조와 표현, 기능을 제공하는 것</li>
+<li>사용자 뿐만 아니라 개발자에게도 많은 이점을 제공</li>
+</ul>
+</li>
+<li>웹 표준을 따라야 하는 이유(<strong><u>검색해봐</u></strong>)</li>
+</ul>
+<h4 id="2-HTML5"><a href="#2-HTML5" class="headerlink" title="2. HTML5"></a>2. HTML5</h4><ul>
+<li>HTML5 등장의 의미(<strong><u>교재 한번 읽어봐</u></strong>)<ul>
+<li>HTML5의 주요 발전 과정</li>
+<li>HTML5 사양<ul>
+<li>주요 HTML5 API : 캔버스, 멀티미디어, 위치정보, 오프라인 웹, 웹 데이터베이스, 로컬저장소, 웹 소켓, 웹 워커</li>
+</ul>
+</li>
+<li>HTML5의 발전 방향</li>
+<li>HTML5의 특징<ul>
+<li>웹 표준으로서의 위상 강화</li>
+<li>웹 문서의 의미 주고화 지원</li>
+<li>웹 언어에서 웹 플랫폼으로의 기능확장</li>
+<li>웹 폼 기능 지원</li>
+<li>풍부한 웹 페이지(미디어) 기능지원</li>
+<li>모바일 웹 어플리케이션 개발 지원</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-플랫폼이-된-웹-브라우저"><a href="#3-플랫폼이-된-웹-브라우저" class="headerlink" title="3. 플랫폼이 된 웹 브라우저"></a>3. 플랫폼이 된 웹 브라우저</h4><ul>
+<li>단순한 뷰어가 아니라 프로그램을 실행할 수 있는 플래폼으로 간주됨</li>
+<li>“HTML페이지”라는 프로그램이 “웹 브라우저라”는 운영체제에서 실행되는 것으로 이해</li>
+<li>웹의 목표</li>
+<li>웹 브라우저 전쟁</li>
+<li>주요 웹 브라우저의 종류</li>
+<li>웹 브라우저<ul>
+<li>단순한 번역기 이상의 역할을 수행</li>
+<li>HTML, CSS, 자바스크립트 코드를 받아 해석하고 처리하는 기능을 수행</li>
+<li>내부에 웹 브라우저 엔진을 가짐</li>
+</ul>
+</li>
+<li>웹 브라우저 엔진 기본 요소</li>
+<li>DOM 트리 구성 : DOM 파서<ul>
+<li>HTML문서를 파서를 통해 파싱해서 메모리에 <strong>‘DOM(Document Object Model) 트리’</strong>라는 내부 트리를 구성</li>
+</ul>
+</li>
+<li>MVC(Model View Controller) 구조를 그대로 따름<ul>
+<li>모델 - HTML / 뷰 - CSS / 기능제어기 - JavaScript</li>
+</ul>
+</li>
+<li>MVC 개발 방식</li>
+</ul>
+<h4 id="4-모바일-웹-환경"><a href="#4-모바일-웹-환경" class="headerlink" title="4. 모바일 웹 환경"></a>4. 모바일 웹 환경</h4><ul>
+<li>데스크톱 웹과 모바일 웹</li>
+<li>앱</li>
+<li>모바일 프로그래밍 방식의 변화</li>
+<li><strong>네이티브 웹</strong><ul>
+<li>네이티브 언어를 사용하여 개발된 모바일 장치에 최적화된 애플리케이션</li>
+<li>장점<ul>
+<li>카메라, 스피커, GPS등의 장치들을 직접 제어할 수 있고 효율성이 높음</li>
+<li>각 플랫폼 별로 다른 프로그래밍 언어를 익혀서 개발해야 함</li>
+<li>각 플랫폼에 최적화되어 실행 속도가 빠르다.</li>
+<li>스마트폰만의 모든 장치 접근이 가능하며 정교한 UI 개발이 가능하다</li>
+<li>앱 마켓을 통해 등록함으로써 수익을 얻기가 쉽다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>개발기간이 길고 많은 비용이 소요된다.</li>
+<li>각 플랫폼 별로 별도의 버전을 다른 언어로 매번 개발해야 한다.</li>
+<li>앱 마켓을 통해 배포되므로 갱신이나 유지보수가 복잡하고 어렵다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>웹앱</strong><ul>
+<li>웹 기술로 개발하지만 겉모양은 네이티브처럼 보이는 애플리케이션</li>
+<li>모바일 브라우저</li>
+<li>장점<ul>
+<li>기기에 상관없이 한번 개발하면 어떤 환경에도 적용할 수 있음</li>
+<li>기존의 표준 웹 기술을 사용하므로 단기간에 빠르고 쉽게 개발할 수 있다.</li>
+<li>웹 브라우저만 있으면 다양한 장치와 플랫폼에서 동일하게 실행 가능하다.</li>
+<li>웹 브라우저를 통해 배포되므로 갱신이나 유지보수가 쉽다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>웹 페이지 내용이 많을 경우, 성능 문제가 발생할 수 있다.</li>
+<li>모바일 장치에 대한 제어가 제한적이며 코드 효율성이 낮다.</li>
+<li>적용할 수 있는 UI에 한계가 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>하이브리드 앱</strong><ul>
+<li>네이티브앱과 웹앱의 장점을 결합한 애플리케이션</li>
+<li>대부분의 기능은 웹 기술로 개발하고 최소한의 기능만 네이티브로 구현</li>
+<li>특징<ul>
+<li>표준 웹 기술로 웹앱을 개발하고 이를 다시 네이티브앱으로 변환한 다음 배포하는 방식</li>
+<li>크로스 르레임워크를 사용하여 웹 페이지를 애플리케이션으로 변환하거나 애플리케이션처럼 독립적으로 실행할 수 있음</li>
+</ul>
+</li>
+<li>장점<ul>
+<li>다양한 플랫폼을 위한 앱 개발 및 유지보수 비용이 낮다.</li>
+<li>장치 접근도 가능하고 앱 마켓을 통해 등록, 배포할 수 있다.</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>네이티브앱에 비해 실행 속도가 느리다.</li>
+<li>자유로운 UI구현에 한계가 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>상호 보완 관계 속에 각 방식마다 특성을 갖고 함께 발전할 전망<ul>
+<li>네이티브앱<ul>
+<li>각 모바일 장치와 플랫폼의 특성을 최대한 이용하는 방향</li>
+<li>‘기능’중심의 영역의 강점</li>
+</ul>
+</li>
+<li>웹앱, 하이브리드 앱<ul>
+<li>‘기능’중심의 생산성과 비용측면을 강화하는 방향</li>
+<li>동적인 콘텐츠가 핵심인’정보’ 중심의 영역에 강점</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="02-HTML5-기초다지기"><a href="#02-HTML5-기초다지기" class="headerlink" title="02. HTML5 기초다지기"></a>02. HTML5 기초다지기</h3><h4 id="1-HTML5-개요"><a href="#1-HTML5-개요" class="headerlink" title="1. HTML5 개요"></a>1. HTML5 개요</h4><ul>
+<li><p>HTML5 문서의 구조</p>
+<ul>
+<li>DOCTYPE</li>
+<li>html</li>
+<li>head</li>
+<li>body</li>
+</ul>
+</li>
+<li><p>HTML5의 5가지 기본 요소</p>
+<ul>
+<li>태그 : 쌍으로 구성되어 있음, </li>
+<li>내용 : 태그로 둘러싸인 물자열</li>
+<li>엘리먼트 : 태그와 내용을 합친 전체 문자열</li>
+<li>속성 : 시작 태그 안에 사용</li>
+<li>속성값</li>
+</ul>
+</li>
+<li><p>엘리먼트</p>
+<ul>
+<li>HTML5문서는 기본적으로 엘리먼트들의 모임</li>
+<li>하나의 웹 문서는 다양한 유형의 엘리먼트 조각으로 분리될 수 있음</li>
+</ul>
+</li>
+<li><p>태그</p>
+<ul>
+<li>웹 브라우저가 해석해야 할 대상</li>
+<li>엘리먼트의 시작과 끝을 지정하는 엘리먼트 구성 요소중에 하나</li>
+<li>엘리먼트 내용에 대한 의미나 역할을 표현하는 일종의 ‘명령어’</li>
+</ul>
+</li>
+</ul>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2020/04/04/TIL-20-04-04/"
+                    data-tooltip="TIL(20.04.04)"
+                    aria-label="NÄCHSTER: TIL(20.04.04)"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2020 MoonPeter. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a
+                        class="post-action-btn btn btn--disabled"
+                        aria-hidden="true"
+                    >
+                        
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2020/04/04/TIL-20-04-04/"
+                    data-tooltip="TIL(20.04.04)"
+                    aria-label="NÄCHSTER: TIL(20.04.04)"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Diesen Beitrag teilen"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                        aria-label="Teilen auf Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                        aria-label="Teilen auf Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://moonpeter.github.io/2020/04/14/ND-TIL-20-04-13/"
+                        aria-label="Teilen auf Google Plus"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">MoonPeter</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>
