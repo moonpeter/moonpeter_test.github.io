@@ -228,10 +228,186 @@
                     
                         <a
                             class="link-unstyled"
-                            href="/2020/04/15/ND-TIL-20-04-14/"
-                            aria-label=": ND TIL(20.04.14)"
+                            href="/2020/04/16/TIL-20-04-16/"
+                            aria-label=": TIL(20.04.16)"
                         >
-                            ND TIL(20.04.14)
+                            TIL(20.04.16)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2020-04-16T16:15:35+09:00">
+	
+		    16 4월 2020
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h2 id="4-16일-목"><a href="#4-16일-목" class="headerlink" title="4/16일(목)"></a>4/16일(목)</h2><h3 id="05-제이쿼리-모바일-기초-다지기"><a href="#05-제이쿼리-모바일-기초-다지기" class="headerlink" title="05. 제이쿼리 모바일 기초 다지기"></a>05. 제이쿼리 모바일 기초 다지기</h3><ul>
+<li>DOM(Document Object Model) 참고하기<ul>
+<li>DOM 소개(from 모질라) :  <a href="https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/소개" target="_blank" rel="noopener">https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/%EC%86%8C%EA%B0%9C</a></li>
+<li><a href="https://wit.nts-corp.com/2019/02/14/5522" target="_blank" rel="noopener">https://wit.nts-corp.com/2019/02/14/5522</a></li>
+<li>브라우저는 어떻게 동작하는가? : <a href="https://d2.naver.com/helloworld/59361" target="_blank" rel="noopener">https://d2.naver.com/helloworld/59361</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>웹 애플리케이션 개발 동향</p>
+<ul>
+<li>애플리케이션(데스크톱)</li>
+<li>웹애플리케이션(데스크톱)</li>
+<li>모바일 웹 애플리케이션(웹앱)</li>
+<li>모바일 애플리케이션(네이티브앱)</li>
+</ul>
+</li>
+<li><p>모바일 환경에서는 사용자 경험이 강조됨</p>
+</li>
+<li><p>모바일 UI 프레임워크</p>
+<ul>
+<li>제이쿼리 모바일(실질적으로 가장 많이 사용됨) - jQuery를 확장한 프레임워크</li>
+<li>센차 터치</li>
+<li>제이큐터치</li>
+</ul>
+</li>
+<li><p>제이쿼리 모바일</p>
+<ul>
+<li>장점<ul>
+<li>제이쿼리 모바일 확장 속성만 활용, 제이쿼리 지식이 부족해도 모바일 화면을 구성 가능</li>
+<li>거의 모든 모바일 장치를 지원</li>
+<li>CSS3로 만들어진 여러 테마를 조합하여 세련된 디자인이 가능</li>
+</ul>
+</li>
+<li>단점<ul>
+<li>제이쿼리와 제이쿼리 모바일 라이브러리를 추가로 필요로 하므로 용량이 커져 대역폭과 로딩시간이 늘어남</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>프레임워크 연결 방식</p>
+<ul>
+<li>CDN 방식(컨텐츠 전송 네트워크)<ul>
+<li>파일을 직접 다운받지 않고 제이쿼리 모바일 서버의 URL 주소만을 마크업에 명세함으로써 프레임워크가 적용될 때 참조하는 방식</li>
+<li>인터넷 연결이 필수적임</li>
+</ul>
+</li>
+<li>다운로드 방식</li>
+</ul>
+</li>
+<li><p>제이쿼리 모바일 페이지 구조</p>
+<ul>
+<li>페이지 - 브라우저에 보여지는 전체 화면 영역, 헤더, 콘텐츠, 푸터를 포함하는 컨테이너 역할</li>
+<li>헤더</li>
+<li>콘텐츠</li>
+<li>푸터</li>
+</ul>
+</li>
+<li><p>모바일 페이지 구성 유형</p>
+<ul>
+<li>단일페이지 탬플릿<ul>
+<li>HTML5 문서 안에 오직 하나의 페이지를 정의</li>
+</ul>
+</li>
+<li>다중 페이지 탬플릿<ul>
+<li>HTML5 문서 안에 둘 이상의 페이지를 정의</li>
+<li>초기에 모든 페이지를 읽어 들이므로 부담이 되지만 이 후에는 페이지 연결 속도가 매우 빠르다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>페이지 연결 방식</p>
+<ul>
+<li>내부 페이지 연결 - 하나의 HTML5 파일 안에 여러 페이지를 명세하여 서로 연결하는 방법</li>
+<li>외부 페이지 연결 - 여러 HTML5파일 안에 페이지들을 나누어 명세하고 서로 연결하는 방법</li>
+</ul>
+</li>
+<li><p>페이지 전환 효과</p>
+<ul>
+<li>제이쿼리 모바일은 CSS3를 사용, 페이지 이동 과정에서 화면 전환 효과를 제공</li>
+</ul>
+</li>
+</ul>
+<h3 id="06-제이쿼리-모바일-헤더바와-푸터바"><a href="#06-제이쿼리-모바일-헤더바와-푸터바" class="headerlink" title="06. 제이쿼리 모바일 헤더바와 푸터바"></a>06. 제이쿼리 모바일 헤더바와 푸터바</h3><h4 id="1-헤더바"><a href="#1-헤더바" class="headerlink" title="1. 헤더바"></a>1. 헤더바</h4><ul>
+<li>헤더 문자열 추가<ul>
+<li>헤더 영역 구분: 왼쪽 영역, 제목 문자열 영역, 오른쪽 영역</li>
+<li>헤더바의 문자열은 주로 페이지 제목을 표시(h1~h6사용)</li>
+</ul>
+</li>
+<li>헤더 버튼 추가</li>
+</ul>
+<h4 id="2-푸터바"><a href="#2-푸터바" class="headerlink" title="2. 푸터바"></a>2. 푸터바</h4><ul>
+<li>푸터바</li>
+<li>푸터바 문자열 추가</li>
+<li>푸터바 버튼 추가</li>
+</ul>
+<h4 id="4-네비게이션바"><a href="#4-네비게이션바" class="headerlink" title="4. 네비게이션바"></a>4. 네비게이션바</h4><ul>
+<li><p>헤더바의 경우, 3개 이상의 버튼이 필요할 경우 네비게이션바를 사용</p>
+</li>
+<li><p>보통 모바일 기기를 손에 쥐고 쉽게 메뉴를 선택하도록 푸터바에 많이 배치</p>
+</li>
+<li><p>네비게이션 바 추가</p>
+</li>
+<li><p>네비게이션바 버튼 활성화</p>
+</li>
+<li><p>헤더바와 푸터바의 고정 배치</p>
+<ul>
+<li>헤더바와 푸터바의 표시 위치를 화면 맨 위와 맨 밑으로 고정</li>
+</ul>
+</li>
+<li><p>헤더바와 푸터바의 숨김</p>
+<ul>
+<li>전체화면 모드 설정</li>
+<li>헤더바와 푸터바를 모바일 페이지에서 사라지게 하고 필요할 경우에만 화면에 동적으로 표시</li>
+<li>그림, 사진, 비디오 뷰어 등에서 미디어 내용을 화면 전체에 나타내고자 할 때</li>
+<li>화면을 터치함으로써 헤더바와 푸터바의 표시와 숨김 두가지 상태를 반복</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-툴바"><a href="#5-툴바" class="headerlink" title="5. 툴바"></a>5. 툴바</h4><ul>
+<li>지속형 푸터바 설정<ul>
+<li>​    여러 페이지의 푸터바가 모두 동일할 경우, 페이지 이동 시에도 화면 하단에 고정되어 표시 가능</li>
+</ul>
+</li>
+</ul>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2020/04/16/TIL-20-04-16/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Kommentieren und teilen
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/2020/04/15/ND-TIL-20-04-14/"
+                            aria-label=": TIL(20.04.14)"
+                        >
+                            TIL(20.04.14)
                         </a>
                     
                 </h1>
@@ -391,9 +567,9 @@
                         <a
                             class="link-unstyled"
                             href="/2020/04/14/ND-TIL-20-04-13/"
-                            aria-label=": ND TIL(20.04.13)"
+                            aria-label=": TIL(20.04.13)"
                         >
-                            ND TIL(20.04.13)
+                            TIL(20.04.13)
                         </a>
                     
                 </h1>
@@ -1252,79 +1428,6 @@
                         <p>
                             <a
                                 href="/2019/12/27/2019/december/1223_instagram/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
-                                Kommentieren und teilen
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title">
-                    
-                        <a
-                            class="link-unstyled"
-                            href="/2019/12/11/2019/december/1211_django/"
-                            aria-label=": 2019/december/1211_django"
-                        >
-                            2019/december/1211_django
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time datetime="2019-12-11T13:03:00+09:00">
-	
-		    11 12월 2019
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/TIL/">TIL</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content">
-                    <hr>
-<h1 id="12월-11일-TIL"><a href="#12월-11일-TIL" class="headerlink" title="12월 11일 TIL"></a>12월 11일 TIL</h1><h2 id="장고걸스-튜토리얼-2일차"><a href="#장고걸스-튜토리얼-2일차" class="headerlink" title="장고걸스 튜토리얼 2일차"></a>장고걸스 튜토리얼 2일차</h2><p>모델-뷰-컨트롤러 :  소프트웨어 공학에서 사용되는 소프트웨어 디자인 패턴이다. 이 패턴을 성공적으로 사용하면, 사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션의 시각적 요소나 그 이면에서 실행되는 비즈니스 로직을 서로 영향 없이 쉽게 고칠 수 있는 애플리케이션을 만들 수 있다. MVC에서 모델은 애플리케이션의 정보(데이터)를 나타내며, 뷰는 텍스트, 체크박스 항목 등과 같은 사용자 인터페이스 요소를 나타내고, 컨트롤러는 데이터와 비즈니스 로직 사이의 상호동작을 관리한다.</p>
-<p>MVC(모델-뷰-컨트롤러)</p>
-<p>MTV</p>
-<p><strong>Model</strong></p>
-<p>​    DB</p>
-<p><strong>View (Django: Template)</strong></p>
-<p>​    사용자가 보는 화면</p>
-<p><strong>Controller (Django : View)</strong></p>
-<p>​    DB의 데이터를 사용자가 보는 화면으로 전달(View code를 사용하여 response(HTML형태)를 생성하여 전달) or</p>
-<p>​    사용자의 데이터를 적절히 가공해서 DB에 변경사항을 전달</p>
-<p>urls.py -&gt; URLResolver</p>
-<p>요청의 URL을 판단해서 특정 Controller(View 함수)로 연결</p>
-<p>Request -&gt; runserver -&gt; urls.py -&gt; view function -&gt;Response(HTTP 규격)</p>
-<p>pip install django-extentions notebook</p>
-<p>./manage.py shell_plus –notebook</p>
-
-                    
-                        
-
-
-                    
-                    
-                        <p>
-                            <a
-                                href="/2019/12/11/2019/december/1211_django/#post-footer"
                                 class="postShorten-excerpt_link link"
                                 aria-label=""
                             >
