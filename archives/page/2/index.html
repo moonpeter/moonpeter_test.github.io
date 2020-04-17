@@ -228,6 +228,119 @@
                     
                         <a
                             class="link-unstyled"
+                            href="/2019/12/27/2019/december/1223_instagram/"
+                            aria-label=": 2019/december/1223_instagram"
+                        >
+                            2019/december/1223_instagram
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2019-12-27T14:31:00+09:00">
+	
+		    27 12월 2019
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/TIL/">TIL</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <hr>
+<h1 id="Django로-Instagram-기능-구현하기"><a href="#Django로-Instagram-기능-구현하기" class="headerlink" title="Django로 Instagram 기능 구현하기"></a>Django로 Instagram 기능 구현하기</h1><h2 id="1-경로-및-가상환경-설정하기"><a href="#1-경로-및-가상환경-설정하기" class="headerlink" title="1. 경로 및 가상환경 설정하기"></a>1. 경로 및 가상환경 설정하기</h2><ol>
+<li>~/projects/wps12/instagram/</li>
+<li>env : was-instagram-env (Interpreter 설정해주기)</li>
+<li>$ pip install ‘django&lt;3.0’</li>
+<li>$ git init &amp; git ignore<ul>
+<li>.gitignore      #gitignore.io. (Git, Linux, macOS, Python, Django, Windows, PyCharm+all, jupyternotebook)</li>
+</ul>
+</li>
+<li>$ pip install django-extensions notebook (필수사항 아님, settings의 INSTALLED_APPS에 추가해줘야 작동함)</li>
+<li>pip freeze &gt; requirements.txt (필요한 프로그램들을 list-up하여 파일로 만들어줌)</li>
+</ol>
+<h2 id="2-project-시작하기"><a href="#2-project-시작하기" class="headerlink" title="2. project 시작하기"></a>2. project 시작하기</h2><ol>
+<li><p>$ django-admin startproject config (프로젝트 생성)</p>
+</li>
+<li><p>$ mv config app (config폴더의 이름을 app으로 변경)</p>
+</li>
+<li><p>app폴더를 sources root 설정하기</p>
+<img src="/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224101855003.png" alt="image-20191224101855003" style="zoom: 33%;" />
+
+
+
+</li>
+</ol>
+<h2 id="3-app-추가하기"><a href="#3-app-추가하기" class="headerlink" title="3. app 추가하기"></a>3. app 추가하기</h2><ol>
+<li>members앱 추가<ul>
+<li>$ django-admin startapp members</li>
+</ul>
+</li>
+<li>posts앱 추가<ul>
+<li>$ django-admin startapp posts<br>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+</ul>
+</li>
+</ol>
+<h2 id="24일-수업한-내용"><a href="#24일-수업한-내용" class="headerlink" title="24일 수업한 내용"></a>24일 수업한 내용</h2><p>HTTP Scheme + HOST + MEDIA_URL + FileField의 실제 값</p>
+<p>http//: + localhost:8000 + /meida/ + popsts/images/파일명.jpg</p>
+<p>![image-20191224143043684](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224143043684.png)</p>
+<p>![image-20191224143124546](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224143124546.png)</p>
+<p>=&gt; prefix=settings.MEDIA_URL, 로 변경</p>
+<p>쿠키기반 사용자 세션</p>
+<h1 id="image-20191224185700341-Users-moonpeter-Library-Application-Support-typora-user-images-image-20191224185700341-png"><a href="#image-20191224185700341-Users-moonpeter-Library-Application-Support-typora-user-images-image-20191224185700341-png" class="headerlink" title="![image-20191224185700341](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224185700341.png)"></a>![image-20191224185700341](/Users/moonpeter/Library/Application Support/typora-user-images/image-20191224185700341.png)</h1><p>   oo</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>62aa7d37cefebe001f8f69f1f4433ee1398bb42b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2019/12/27/2019/december/1223_instagram/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Kommentieren und teilen
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
                             href="/2019/12/11/2019/december/1211_django/"
                             aria-label=": 2019/december/1211_django"
                         >
